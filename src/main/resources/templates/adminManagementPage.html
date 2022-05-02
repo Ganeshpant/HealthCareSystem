@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:include="header"></div>
+<table>
+
+<thead>
+<tr>
+<th>id</th>
+<th>Name</th>
+<th>Gender</th>
+<th>Email</th>
+<th>Password</th>
+<th>Phone</th>
+<th>Blood Group</th>
+<th>Country</th>
+<th>State</th>
+<th>Zone</th>
+<th>District</th>
+<th>zip Code</th>
+<th>Municipality</th>
+<th>ward no</th>
+<th>Tole</th>
+<th> Action</th>
+</tr>
+
+</thead>
+
+<tbody>
+<tr th:each="admin:${adminList}">
+<td th:text="${admin.id}"></td>
+<td th:text="${admin.name}"></td>
+<td th:text="${admin.gender}"></td>
+<td th:text="${admin.email}"></td>
+<td th:text="${admin.password}"></td>
+<td th:text="${admin.phone}"></td>
+<td th:text="${admin.bloodGroup}"></td>
+
+</tr>
+
+</tbody>
+</table>
+<a href="/addAdmin"><input type="submit" value ="Add"></a>
+
+</body>
+</html>

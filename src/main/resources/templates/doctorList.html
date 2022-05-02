@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+color:gray;
+text-align: center;
+background: yellow;
+background-size: auto;
+}
+table {
+text-align:center;
+	border-color: red;
+	table-layout: inherit;
+	background-color: green;
+	
+}
+</style>
+</head>
+<body>
+<div th:insert="header"></div>
+<h1 > Doctor List</h1>
+<table border="1" id="doctorTable">
+<thead>
+<tr>
+<th>id</th>
+<th>Name</th>
+<th>Gender</th>
+<th>email</th>
+<th>phone</th>
+<th>Doctor id</th>
+<th>Degree From</th>
+<th>affilated From</th>
+<th>Treatment</th>
+<th>Country</th>
+<th>State</th>
+<th>Zone</th>
+<th>District</th>
+<th>zip Code</th>
+<th>Municipality</th>
+<th>ward no</th>
+<th>Tole</th>
+<th> Action</th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each="doc:${list}">
+<td th:text="${doc.id}"></td>
+<td th:text="${doc.name}"></td>
+<td th:text="${doc.gender}"></td>
+<td th:text="${doc.email}"></td>
+<td th:text="${doc.phone}"></td>
+<td th:text="${doc.doctorId}"></td>
+<td th:text="${doc.degreeFrom}"></td>
+<td th:text="${doc.affilatedFrom}"></td>
+<td th:text="${doc.treatment}"></td>
+<td th:text="${doc.address.country}"></td>
+<td th:text="${doc.address.state}"></td>
+<td th:text="${doc.address.zone}"></td>
+<td th:text="${doc.address.district}"></td>
+<td th:text="${doc.address.zip}"></td>
+<td th:text="${doc.address.municipality}"></td>
+<td th:text="${doc.address.wardNo}"></td>
+<td th:text="${doc.address.tole}"></td>
+
+<td><a th:href="@{/delete?(id=${doc.id})}"><input type="submit" value ="delete" class="btn btn-danger"></a> <br><br>
+<a th:href="@{/edit?(id=${doc.id})}"> <input type="submit" value="edit" class ="btn btn-primary"></a>
+
+</td>
+
+
+</tr>
+
+</tbody>
+
+</table>
+<script type="text/javascript">
+
+$(document).ready( function () {
+    $('#doctorTable').DataTable();
+} );
+</script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:insert="header"></div>
+	<div class="container">
+		<div class="card">
+			<form action="/doctorAdd" method="post">
+				<div class="card-header bg-primary text-center text-white fs-3">
+					Doctor Form</div>
+				<div class="card-body">
+					<div class="row py-2">
+
+						<div class="col-4">Name</div>
+						<div class="col-6">
+							<input type="text" name="name" placeholder="Enter your name"
+								class="form-control">
+						</div>
+					</div>
+					<div class="row py-2">
+
+						<div class="col-4">Gender</div>
+						<div class="col-6">
+							<input type="radio" name="gender" value="mael"> Male <input
+								type="radio" name="gender" value="female"> Female <input
+								type="radio" name="gender" value="other"> Other
+						</div>
+					</div>
+					<div class="row py-2">
+
+						<div class="col-4">Email</div>
+						<div class="col-6">
+							<input type="email" name="email" placeholder="Enter your email"
+								class="form-control">
+						</div>
+					</div>
+					<div class="row py-2">
+
+						<div class="col-4">phone</div>
+						<div class="col-6">
+							<input type="text" name="phone"
+								placeholder="Enter your pnone number" class="form-control">
+						</div>
+					</div>
+
+					<div class="row py-2">
+
+						<div class="col-4">Doctor id</div>
+						<div class="col-6">
+							<input type="text" name="doctorId"
+								placeholder="Enter your Doctor id" class="form-control">
+						</div>
+					</div>
+
+
+
+
+
+					<div class="row py-2">
+
+						<div class="col-4">Degree From</div>
+						<div class="col-6">
+							<input type="text" name="degreeFrom" placeholder="Enter clz/uv"
+								class="form-control">
+						</div>
+					</div>
+					<div class="row py-2">
+
+						<div class="col-4">Affilated From</div>
+						<div class="col-6">
+							<input type="text" name="AffilatedFrom"
+								placeholder="Affilated from" class="form-control">
+						</div>
+					</div>
+
+					<div class="row py-2">
+
+						<div class="col-4">Treatment</div>
+						<div class="col-6">
+							<input type="text" name="treatment"
+								placeholder="Does Special treatmet" class="form-control">
+						</div>
+					</div>
+
+					<div class="row py-2">
+						<div class="col-4">Country</div>
+						<div class="col-6">
+							<select name="address.country" class="form-control">
+								<option value="">-----Select Country----</option>
+								<option value="Nepal">Nepal</option>
+								<option value="China">China</option>
+								<option value="India">India</option>
+								<option value="Japan">Japan</option>
+								<option value="Koria">Koria</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row py-2">
+						<div class="col-4">State</div>
+						<div class="col-6">
+							<select name="address.state" class="form-control">
+								<option value="">-----Select State----</option>
+								<option value="Province No. 1">Province No. 1</option>
+								<option value="Province No. 2">Province No. 2</option>
+								<option value="Province No. 3">Province No. 3</option>
+								<option value="Gandaki">Gandaki</option>
+								<option value="Karnali">Karnali</option>
+								<option value="Sudurpashchim">Sudurpashchim</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row py-2">
+						<div class="col-4">Zone</div>
+						<div class="col-6">
+							<select name="address.zone" class="form-control">
+								<option value="">-----Select Zone----</option>
+								<option value="Mechi">Mechi</option>
+								<option value="Koshi">Koshi</option>
+								<option value="Sagarmatha">Sagarmatha</option>
+								<option value="Janakpur">Janakpur</option>
+								<option value="Bagmati">Bagmati</option>
+								<option value="Narayani">Narayani</option>
+								<option value="Gandaki">Gandaki</option>
+								<option value="Lumbini">Lumbini</option>
+								<option value="Dhawalagiri">Dhawalagiri</option>
+								<option value="Rapti">Rapti</option>
+								<option value="Karnali">Karnali</option>
+								<option value="Bheri">Bheri</option>
+								<option value="Seti">Seti</option>
+								<option value="Mahakali">Mahakali</option>
+
+							</select>
+						</div>
+					</div>
+
+
+					<div class="row py-2">
+
+						<div class="col-4">District</div>
+						<div class="col-6">
+							<input type="text" name="address.district"
+								placeholder="Enter your District name" class="form-control">
+						</div>
+					</div>
+
+					<div class="row py-2">
+						<div class="col-4">Zip Code</div>
+						<div class="col-6">
+							<input type="text" name="address.zip"
+								placeholder="Enter your zip" class="form-control">
+						</div>
+					</div>
+
+
+					<div class="row py-2">
+					<div class="col-4">Municipality</div>
+					<div class="col-6">
+						<input type="text" name="address.municipality"
+							placeholder="Enter your Municipality" class="form-control">
+					</div>
+				</div>
+				<div class="row py-2">
+				<div class="col-4">Ward no.</div>
+				<div class="col-6">
+					<input type="text" name="address.wardNo"
+						placeholder="Enter your Ward.no" class="form-control">
+				</div>
+		</div>
+
+		<div class="row py-2">
+		<div class="col-4">Tole</div>
+		<div class="col-6">
+			<input type="text" name="address.tole"
+				placeholder="Enter your tole name" class="form-control">
+		</div>
+	</div>
+	<div class="row py-2">
+
+		<div class="col-4"></div>
+		<div class="col-6">
+			<input type="submit" value="Add" class="btn btn-success">
+
+		</div>
+	</div>
+	</div>
+	</form>
+	</div>
+	<div class="card-footer bg-info text-center text-yellow">CopyRight@2022</div>
+	</div>
+
+
+</body>
+</html>
